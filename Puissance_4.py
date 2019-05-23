@@ -56,7 +56,6 @@ def gagnerhori():
                if (grille[ca][c]=="J") and (grille[ca+1][c]=="J") and (grille[ca+2][c]=="J") and (grille[ca+3][c]=="J"):
                    gagne=2
     print("")
-    print(gagne)
     return gagne
                    
 def gagnerverti():
@@ -70,6 +69,7 @@ def gagnerverti():
             if (tr==0):
                 if (grille[d][da]=="J") and (grille[d][da+1]=="J") and (grille[d][da+2]=="J") and (grille[d][da+3]=="J"):
                    gagne=2
+    print("")
     return gagne
 
 def gagnerdiagauche():
@@ -99,7 +99,30 @@ def gagnerdiadroite():
                     gagne=2
     print("")
     return gagne
+    
+def reset():
+    global gagne,grille
+    
+    can.delete(ALL)
+    gagne=-1
+    bouA.config(state=NORMAL)
+    bouB.config(state=NORMAL)
+    bouC.config(state=NORMAL)
+    bouD.config(state=NORMAL)
+    bouE.config(state=NORMAL)
+    bouF.config(state=NORMAL)
+    bouG.config(state=NORMAL)
 
+    grille=[["A1","A2","A3","A4","A5","A6"],["B1","B2","B3","B4","B5","B6"],["C1","C2","C3","C4","C5","C6"],["D1","D2","D3","D4","D5","D6"],["E1","E2","E3","E4","E5","E6"],["F1","F2","F3","F4","F5","F6"],["G1","G2","G3","G4","G5","G6"]]
+
+    
+    position_ligne_v=90
+    position_ligne_h=90
+    
+    for x in range(0,7):
+        ligne_v=can.create_line(position_ligne_v + 90*x, 0, position_ligne_v + 90*x, 540,fill="blue")
+    for y in range(0,6):
+        ligne_h=can.create_line(0, position_ligne_h + 90*y, 630, position_ligne_h + 90*y,fill="blue")
 
                     
 def jouer():
@@ -122,6 +145,9 @@ def jouer():
         bouE.config(state=DISABLED)
         bouF.config(state=DISABLED)
         bouG.config(state=DISABLED)
+        s=0
+        bouR=Button(fen,text="Recommencer",command=reset,background="red")
+        bouR.grid(row=6,column=3)
     if (gagne==2):
         print("Le joueur Jaune a gagné en",s,"tours. Bravo!")
         can.create_text(315,270,text="Le joueur Jaune a gagné en "+str(s)+" tours.\n                         Bravo!",font=("Arial",25,"bold"),fill="yellow")
@@ -131,7 +157,10 @@ def jouer():
         bouD.config(state=DISABLED)
         bouE.config(state=DISABLED)
         bouF.config(state=DISABLED)
-        bouG.config(state=DISABLED)        
+        bouG.config(state=DISABLED)
+        s=0
+        bouR=Button(fen,text="Recommencer",command=reset,background="yellow")
+        bouR.grid(row=6,column=3)        
         
 def clic1():
     global tr
