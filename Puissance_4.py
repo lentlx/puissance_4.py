@@ -316,48 +316,4 @@ for y in range(0,6):
 
                 
 fen.mainloop()
-
-
-
-
-#def jeton(event):
-#    for b in range (5,-1,-1):
-#        if tr==0: 
-#            if event.x<=75 and (grille[0][b]!="R" or grille[0][b]!="J"):
-#                return grille[0][b]=="R"
-#            elif event.x<=150 and (grille[1][b]!="R" or grille[1][b]!="J"):
-#                return grille[1][b]=="R"
-#            elif event.x<=225 and (grille[2][b]!="R" or grille[2][b]!="J"):
-#                return grille[2][b]=="R"
-#            elif event.x<=300 and (grille[3][b]!="R" or grille[3][b]!="J"):
-#                return grille[3][b]=="R"
-#            elif event.x<=375 and (grille[4][b]!="R" or grille[4][b]!="J"):
-#                return grille[4][b]=="R"
-#            elif event.x<=450 and (grille[5][b]!="R" or grille[5][b]!="J"):
-#                return grille[5][b]=="R"
-#            elif event.x<=525 and (grille[6][b]!="R" or grille[6][b]!="J"):
-#                return grille[6][b]=="R"
-#        if tr==1: 
-#            if event.x<=75 and (grille[0][b]!="R" or grille[0][b]!="J"):
-#                return grille[0][b]=="J"
-#            elif event.x<=150 and (grille[1][b]!="R" or grille[1][b]!="J"):
-#                return grille[1][b]=="J"
-#            elif event.x<=225 and (grille[2][b]!="R" or grille[2][b]!="J"):
-#                return grille[2][b]=="J"
-#            elif event.x<=300 and (grille[3][b]!="R" or grille[3][b]!="J"):
-#                return grille[3][b]=="J"
-#            elif event.x<=375 and (grille[4][b]!="R" or grille[4][b]!="J"):
-#                return grille[4][b]=="J"
-#            elif event.x<=450 and (grille[5][b]!="R" or grille[5][b]!="J"):
-#                return grille[5][b]=="J"
-#            elif event.x<=525 and (grille[6][b]!="R" or grille[6][b]!="J"):
-#                return grille[6][b]=="J"
-
-
-
-
-
-
-
-    
     
